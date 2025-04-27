@@ -1,0 +1,59 @@
+.roadmap {
+  &__swiper {
+    margin-top: 40px;
+    cursor: pointer;
+  }
+
+  &__item {
+    padding: 40px 40px 50px;
+    border-radius: 30px;
+    background-color: #181818;
+  }
+
+  &__head {
+    margin-bottom: 30px;
+    @include flex-between(30);
+    align-items: center;
+  }
+
+  &__date {
+    text-transform: uppercase;
+  }
+
+  &__status {
+    @include flex-align-center(10);
+    border-radius: 50px;
+    background-color: $white;
+    font-weight: 600;
+    color: #1F2724;
+    padding: 17px 30px;
+    line-height: 1;
+  }
+
+  &__subtitle {
+    font-family: $velaSm;
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: -1.44px;
+    line-height: 1.13;
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    max-width: 515px;
+    line-height: 1.6;
+    color: rgba($white, .65);
+
+    &.short {
+      max-width: 440px;
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    width: 685px;
+  }
+}

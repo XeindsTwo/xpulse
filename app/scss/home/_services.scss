@@ -1,0 +1,38 @@
+.services {
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 55px;
+    max-width: 900px;
+  }
+
+  &__items {
+    @include flex-align-center(10);
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+  }
+
+  &__item {
+    border: 1px solid #2f2f2f;
+    padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 50px;
+    @include flex-align-center(10);
+    position: relative;
+    line-height: 1;
+
+    &::before {
+      content: "";
+      background-image: url("../images/icons/check-services.svg");
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__img {
+    margin-top: -140px;
+    margin-left: auto;
+  }
+}

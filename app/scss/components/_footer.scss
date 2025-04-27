@@ -1,0 +1,45 @@
+.footer {
+  background-color: #070707;
+  padding: 55px 0;
+
+  &__inner {
+    @include flex-between(30);
+    align-items: center;
+  }
+
+  &__info {
+    @include flex-column(27);
+  }
+
+  &__author {
+    color: rgba($white, .65);
+    letter-spacing: -0.36px;
+  }
+
+  &__socials {
+    @include flex-align-center(10);
+  }
+
+  &__social {
+    @include flex-center;
+    border-radius: 50%;
+    background-color: #121212;
+    border: 1px solid transparent;
+    width: 68px;
+    height: 68px;
+    transition: background-color .4s, border .4s;
+
+    &:hover {
+      background-color: #1e1e1e;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border-color: $white;
+
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+}

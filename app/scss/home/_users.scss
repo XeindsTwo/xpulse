@@ -1,0 +1,127 @@
+.users {
+  &__subtext {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 45px;
+    color: rgba($white, .4);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &__inner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 3rem;
+      height: 100%;
+      background: linear-gradient(90deg, #0E0019 42.74%, rgba(14, 0, 25, 0) 99.15%);
+      z-index: 1;
+      @media (max-width: 1400px) {
+        width: 8rem;
+      }
+      @include r($lg) {
+        width: 5rem;
+      }
+      @include r($tablet) {
+        width: 4rem;
+        top: 30px;
+      }
+      @media (max-width: 530px) {
+        width: 3rem;
+      }
+      @include r($phone) {
+        width: 2rem;
+      }
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 60px;
+    animation: scrolling 15s linear infinite;
+    @include r($phone) {
+      gap: 20px;
+    }
+    @media (max-width: 400px) {
+      gap: 30px;
+      animation: scrolling 8s linear infinite;
+    }
+  }
+
+  &__item {
+    @include flex-align-center(16);
+    width: calc(50vw / 4);
+    flex-shrink: 0;
+    @media (max-width: 1300px) {
+      width: calc(50vw / 4);
+    }
+    @include r($lg) {
+      width: calc(60vw / 4);
+    }
+    @include r($tablet) {
+      width: calc(60vw / 3);
+    }
+    @media (max-width: 680px) {
+      width: calc(70vw / 3);
+    }
+    @media (max-width: 530px) {
+      width: calc(90vw / 3);
+    }
+    @media (max-width: 460px) {
+      width: calc(80vw / 3);
+    }
+    @media (max-width: 430px) {
+      width: calc(90vw / 2);
+    }
+    @media (max-width: 400px) {
+      width: calc(70vw / 2);
+    }
+    @media (max-width: 380px) {
+      width: calc(80vw / 2);
+    }
+  }
+
+  &__avatar {
+    @include objectCoverBg;
+    border-radius: 50%;
+  }
+
+  &__info {
+    @include flex-column(8);
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.usefgrs__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: calc(50vw / 5);
+  font-size: calc(20vh * 3 / 4);
+
+}

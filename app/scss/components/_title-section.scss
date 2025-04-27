@@ -1,0 +1,30 @@
+.title-section {
+  font-size: 72px;
+  line-height: 1.13;
+  font-weight: 600;
+  font-family: $velaSm;
+  letter-spacing: -2.88px;
+  @media (max-width: 1300px) {
+    font-size: 52px;
+  }
+  @include r($desktop) {
+    font-size: 48px;
+  }
+  @include r($lg) {
+    font-size: 44px;
+  }
+  @include r($tablet) {
+    font-size: 40px;
+  }
+  @include r($sm) {
+    font-size: 36px;
+  }
+  @include r($phone) {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

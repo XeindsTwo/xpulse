@@ -1,0 +1,134 @@
+.home {
+  &__title, &__text {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $vela;
+    font-weight: 700;
+    font-size: 96px;
+    letter-spacing: -3.84px;
+    line-height: 1.12;
+    margin-bottom: 55px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.3;
+    color: rgba($white, .65);
+    margin-bottom: 105px;
+  }
+
+  &__inner {
+    position: relative;
+    overflow-y: hidden;
+    margin-bottom: 90px;
+  }
+
+  &__video {
+    @include bg;
+    border-radius: 40px;
+    background-image: url("../images/preview.webp");
+    min-height: 820px;
+    max-width: 1470px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      border-radius: 40px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($black, .4);
+    }
+  }
+
+  &__play {
+    position: absolute;
+    padding: 3px;
+    z-index: 100;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    @include flex-center;
+    @include topLeft50;
+    transition: border .4s;
+
+    &:hover {
+      border-color: $white;
+
+      svg path {
+        fill: $white;
+        fill-opacity: 1;
+      }
+    }
+
+    &:focus {
+      border-color: #17ceac;
+
+      svg path {
+        fill: #17ceac;
+        fill-opacity: 1;
+      }
+    }
+
+    svg {
+      width: 80px;
+      height: 80px;
+      @include r($desktop) {
+        width: 70px;
+        height: 70px;
+      }
+      @include r($lg) {
+        width: 66px;
+        height: 66px;
+      }
+      @include r($phone) {
+        width: 63px;
+        height: 63px;
+      }
+    }
+  }
+
+  &__decor {
+    @include objectCoverBg;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &__subtext {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 45px;
+    color: rgba($white, .4);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__item {
+    @include flex-align-center(16);
+  }
+
+  &__avatar {
+    @include objectCoverBg;
+    border-radius: 50%;
+  }
+
+  &__info {
+    @include flex-column(8);
+    font-weight: 600;
+    line-height: 1;
+  }
+}
