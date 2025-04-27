@@ -1,23 +1,65 @@
 .footer {
   background-color: #070707;
   padding: 55px 0;
+  @media (max-width: 1100px) {
+    padding: 43px 0;
+  }
+  @include r($sm) {
+    padding: 35px 0 25px;
+  }
 
   &__inner {
     @include flex-between(30);
     align-items: center;
+    @include r($tablet) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    @include r($tablet) {
+      margin-bottom: 20px;
+      width: 136px;
+      height: auto;
+    }
+    @include r($phone) {
+      width: 130px;
+    }
   }
 
   &__info {
     @include flex-column(27);
+    @include r($tablet) {
+      align-items: center;
+    }
   }
 
   &__author {
     color: rgba($white, .65);
     letter-spacing: -0.36px;
+    @include r($tablet) {
+      font-size: 16px;
+    }
+    @include r($phone) {
+      font-size: 15px;
+    }
   }
 
   &__socials {
     @include flex-align-center(10);
+    @include r($tablet) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      @include r($tablet) {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
   &__social {
@@ -28,6 +70,15 @@
     width: 68px;
     height: 68px;
     transition: background-color .4s, border .4s;
+    @media (max-width: 1100px) {
+      width: 64px;
+      height: 64px;
+    }
+    @include r($phone) {
+      width: 60px;
+      height: 60px;
+      padding: 16px;
+    }
 
     &:hover {
       background-color: #1e1e1e;
@@ -39,6 +90,12 @@
 
       svg path {
         fill: $white;
+      }
+    }
+
+    &--telegram {
+      svg {
+        transform: translateX(-2px) translateY(1px);
       }
     }
   }

@@ -1,12 +1,20 @@
 new Swiper('.roadmap__swiper', {
-  freeMode: true,
   spaceBetween: 20,
-  speed: 1500,
   slidesPerView: 'auto',
   keyboard: {
     enabled: true,
     onlyInViewport: true
   },
+  breakpoints: {
+    550: {
+      freeMode: true,
+      speed: 1200,
+    },
+    260: {
+      autoHeight: true,
+      speed: 800
+    }
+  }
 });
 
 new Swiper('.referral__swiper', {

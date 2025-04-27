@@ -5,23 +5,33 @@
   font-family: $velaSm;
   letter-spacing: -2.88px;
   @media (max-width: 1300px) {
-    font-size: 52px;
+    font-size: 66px;
+    letter-spacing: -2.4px;
   }
   @include r($desktop) {
-    font-size: 48px;
+    font-size: 60px;
+    letter-spacing: -1.8px;
   }
   @include r($lg) {
-    font-size: 44px;
+    font-size: 54px;
+  }
+  @media (max-width: 860px) {
+    font-size: 50px;
+    letter-spacing: -1.3px;
   }
   @include r($tablet) {
-    font-size: 40px;
+    font-size: 46px;
+    letter-spacing: -1px;
   }
   @include r($sm) {
-    font-size: 36px;
+    font-size: 44px;
   }
   @include r($phone) {
-    font-size: 32px;
-    line-height: 1.2;
+    font-size: 40px;
+    letter-spacing: -0.6px;
+  }
+  @media (max-width: 410px) {
+    font-size: 38px;
   }
 
   &--center {
