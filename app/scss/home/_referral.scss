@@ -6,6 +6,12 @@
     border-radius: 30px;
     overflow: hidden;
     background-color: #141414;
+    @include r($desktop) {
+      margin: 0 -5px;
+    }
+    @include r($tablet) {
+      border-radius: 24px;
+    }
   }
 
   &__title, &__text {
@@ -16,6 +22,22 @@
     max-width: 755px;
     text-align: center;
     margin: 95px auto 35px;
+    @include r($lg) {
+      max-width: 570px;
+    }
+    @include r($tablet) {
+      margin-top: 75px;
+    }
+    @media (max-width: 670px) {
+      max-width: 500px;
+    }
+    @media (max-width: 540px) {
+      margin-top: 50px;
+      max-width: 440px;
+    }
+    @media (max-width: 380px) {
+      font-size: 36px;
+    }
   }
 
   &__text {
@@ -26,6 +48,25 @@
     line-height: 1.7;
     letter-spacing: -0.4px;
     color: rgba($white, .65);
+    @media (max-width: 1300px) {
+      margin-bottom: 70px;
+    }
+    @include r($lg) {
+      font-size: 18px;
+      max-width: 570px;
+    }
+    @include r($tablet) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 540px) {
+      line-height: 1.55;
+      font-size: 17px;
+      margin-bottom: 40px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+      line-height: 1.5;
+    }
   }
 
   &__work {
@@ -34,10 +75,39 @@
     padding-bottom: 65px;
     padding-left: 60px;
     border-top: 1px solid #282828;
+    @media (max-width: 1300px) {
+      padding-top: 70px;
+      padding-left: 40px;
+    }
+    @media (max-width: 1240px) {
+      gap: 45px;
+      padding: 70px 40px 60px;
+      flex-direction: column;
+    }
+    @include r($tablet) {
+      padding: 50px 15px 40px;
+    }
+    @include r($sm) {
+      gap: 30px;
+    }
+    @media (max-width: 540px) {
+      padding-top: 40px;
+    }
+    @include r($phone) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   }
 
   &__info {
     max-width: 445px;
+    @media (max-width: 1400px) {
+      max-width: 390px;
+    }
+    @media (max-width: 1240px) {
+      text-align: center;
+      max-width: 520px;
+    }
   }
 
   &__subtitle {
@@ -47,6 +117,25 @@
     font-family: $velaSm;
     line-height: 1.13;
     letter-spacing: -2.24px;
+    @media (max-width: 1400px) {
+      font-size: 50px;
+      letter-spacing: -1.8px;
+    }
+    @include r($desktop) {
+      font-size: 44px;
+      letter-spacing: -1.3px;
+    }
+    @include r($tablet) {
+      font-size: 38px;
+      letter-spacing: -1px;
+    }
+    @media (max-width: 670px) {
+      font-size: 34px;
+      letter-spacing: -0.7px;
+    }
+    @media (max-width: 540px) {
+      font-size: 32px;
+    }
   }
 
   &__description {
@@ -54,15 +143,41 @@
     font-size: 20px;
     letter-spacing: -0.4px;
     line-height: 1.6;
+    @media (max-width: 1400px) {
+      font-size: 18px;
+    }
+    @media (max-width: 680px) {
+      font-size: 17px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+      line-height: 1.5;
+    }
   }
 
   &__swiper {
     max-width: 880px;
     padding-right: 30px;
+    @media (max-width: 1240px) {
+      max-width: 620px;
+      padding-right: 0;
+    }
+    @media (max-width: 1100px) {
+      max-width: 590px;
+    }
+    @media (max-width: 670px) {
+      max-width: 100%;
+    }
   }
 
   .swiper-slide {
     max-width: 650px;
+    @media (max-width: 1330px) {
+      max-width: 620px;
+    }
+    @media (max-width: 1100px) {
+      max-width: 100%;
+    }
   }
 
   &__item {
@@ -72,6 +187,21 @@
     padding: 64px;
     background-image: url("../images/bg-how-works.webp");
     border-radius: 30px;
+    @media (max-width: 1400px) {
+      padding: 54px 46px;
+    }
+    @media (max-width: 1100px) {
+      padding: 48px 40px;
+    }
+    @include r($lg) {
+      justify-content: center;
+    }
+    @media (max-width: 540px) {
+      padding: 44px 28px;
+    }
+    @include r($phone) {
+      border-radius: 18px;
+    }
   }
 
   &__number {
@@ -84,6 +214,22 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: 1300px) {
+      font-size: 86px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 80px;
+      background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.55) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @include r($tablet) {
+      font-size: 70px;
+    }
+    @include r($phone) {
+      font-size: 62px;
+    }
   }
 
   &__subname {
@@ -91,6 +237,19 @@
     font-size: 32px;
     line-height: 1.5;
     letter-spacing: -0.32px;
+    @include r($desktop) {
+      font-size: 28px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 26px;
+    }
+    @include r($tablet) {
+      font-size: 24px;
+    }
+    @include r($sm) {
+      line-height: 1.4;
+      font-size: 22px;
+    }
   }
 
   &__buttons {
@@ -106,6 +265,9 @@
     border-radius: 4px;
     padding-left: 5px;
     transition: color .4s, border .4s, opacity .4s;
+    @include r($tablet) {
+      font-size: 16px;
+    }
 
     &:hover {
       color: rgba($white, .7);

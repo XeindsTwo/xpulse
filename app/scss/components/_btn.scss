@@ -14,8 +14,8 @@
   backdrop-filter: blur(22.450000762939453px);
   transition: background-color .4s, border .4s, color .4s, box-shadow .4s, transform .6s;
   @include r($tablet) {
-    padding: 8px 18px;
-    font-size: 15px;
+    padding: 14px 23px;
+    font-size: 16px;
   }
 
   &:hover {
