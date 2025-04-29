@@ -1,9 +1,9 @@
-@import 'vendor/reset';
-@import 'vendor/libs';
-@import 'vendor/fonts';
-@import 'vendor/vars';
-@import 'vendor/mixin';
-@import 'vendor/global';
+@import 'basic/reset';
+@import 'basic/libs';
+@import 'basic/fonts';
+@import 'basic/vars';
+@import 'basic/mixin';
+@import 'basic/global';
 
 @import "components/btn";
 @import "components/footer";
@@ -18,3 +18,4 @@
 @import "home/features";
 @import "home/services";
 @import "home/referral";
+@import "home/holding";
