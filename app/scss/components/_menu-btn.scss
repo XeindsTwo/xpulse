@@ -14,7 +14,7 @@
   border: 1px solid transparent;
 
   &:hover {
-    background-color: $accent;
+    background-color: #cbcbcb;
 
     .menu-btn__line, .menu-btn__line::after, .menu-btn__line::before {
       background-color: $black;
@@ -23,7 +23,7 @@
 
   &:focus {
     background-color: transparent;
-    border-color: $accent;
+    border-color: $white;
 
     .menu-btn__line, .menu-btn__line::after, .menu-btn__line::before {
       background-color: $white;
@@ -68,7 +68,7 @@
 
   &.active {
     background-color: transparent;
-    border-color: $accent;
+    border-color: $white;
 
     .menu-btn__line {
       background: transparent;

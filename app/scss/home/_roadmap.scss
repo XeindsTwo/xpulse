@@ -1,4 +1,6 @@
 .roadmap {
+  overflow: hidden;
+
   &__btn {
     display: none;
     @include r($desktop) {

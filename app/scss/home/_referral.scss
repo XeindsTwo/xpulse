@@ -11,6 +11,7 @@
     }
     @include r($tablet) {
       border-radius: 24px;
+      margin: 0 -7px;
     }
   }
 
